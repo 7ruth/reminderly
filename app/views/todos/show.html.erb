@@ -1,5 +1,3 @@
 <h2><%= link_to "All Todos", todos_path %></h2>
-<p><%= @todo.body %><p>
-<p><%= @todo.author %></p>
 
-<%= link_to "Edit", edit_todo_path %>
+<%= render partial: 'todo', object: @todo %>

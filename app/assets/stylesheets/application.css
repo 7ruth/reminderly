@@ -38,9 +38,26 @@ a:hover {
   color: white;
 }
 
-p a {
+.todo {
+  border: 1px solid white;
+  margin: 1em auto;
+  width:75%;
+}
+
+.todo a {
   margin: 1em 0;
   line-height: 3em;
+}
+
+.todo div{
+  display: inline-block;
+  margin-right: 1em;
+  border_right: 1px solid white;
+  padding: 1em;
+}
+
+.todo .actions {
+  border: none;
 }
 
 ul {

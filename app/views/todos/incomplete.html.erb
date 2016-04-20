@@ -1,11 +1,5 @@
 <h2>YOU NEED TO DO DEEZ THINGS</h2>
 <h3><%= link_to "New Todo", new_todo_path %></h3>
-<% @incomplete_todos.each do |todo| %>
 
-  <p>
-    <%= link_to todo.body, todo_path(todo) %> |
-    <%= link_to "Delete this todo", todo_path(todo),
-       method: :delete %>
 
-  </p>
-<% end %>
+<%= render partial: 'todo', collection: @incomplete_todos %>

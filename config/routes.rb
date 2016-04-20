@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  # get 'todos' => 'todos#index'
-  get 'incomplete' => 'todos#incomplete'
+  root "todos#index"
 
-  resources :todos
+  resources :todos do
+    get 'incomplete', on: :collections
+    put "mark_complete"
+  end
+
 end

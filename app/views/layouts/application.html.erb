@@ -2,15 +2,19 @@
 <html>
 <head>
   <title>Reminderly</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <nav>
-    <h3><a href="/todos">Todos</a></h3>
-    <h3><a href="javascript:history.back()">Back</a></h3>
+    <%= link_to "All Todos", todos_path %>
+    <%= link_to "Incomplete", incomplete_todos %>
+
+
   </nav>
+
+
 
   <% flash.each do |type, message| %>
     <p class="flash <%= type %>"><%= message %></p>
